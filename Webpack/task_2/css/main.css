@@ -24,8 +24,27 @@
   font-weight: bold;
 }
 
-button + p {
-  display: inline-block;
-  margin-left: 10px;
+button {
+  background-color: #E0354B;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+p {
+  margin: 8px 0;
+}
+
+p:first-of-type {
   font-weight: bold;
+  color: #E0354B;
+  font-size: 18px;
+}
+
+p:last-of-type {
+  font-style: italic;
+  text-align: center;
+  margin-top: 20px;
 }
