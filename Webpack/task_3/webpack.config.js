@@ -10,13 +10,14 @@ module.exports = {
     footer: './modules/footer/footer.js'
   },
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].[contenthash].bundle.js',
     path: path.resolve(__dirname, 'public')
   },
   optimization: {
     splitChunks: {
       chunks: 'all',
     },
+    runtimeChunk: 'single',
   },
   devServer: {
     port: 8564,
@@ -26,7 +27,6 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Development',
       template: './modules/index.html'
     })
   ],
