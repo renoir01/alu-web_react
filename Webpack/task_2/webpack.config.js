@@ -1,5 +1,4 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -10,7 +9,8 @@ module.exports = {
   },
   performance: {
     maxAssetSize: 1000000,
-    maxEntrypointSize: 1000000
+    maxEntrypointSize: 1000000,
+    hints: false
   },
   module: {
     rules: [
