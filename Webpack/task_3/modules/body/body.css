@@ -1,0 +1,14 @@
+#count {
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+button {
+  background-color: #E0354B;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
