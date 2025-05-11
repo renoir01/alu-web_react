@@ -10,8 +10,13 @@ module.exports = {
     footer: './modules/footer/footer.js'
   },
   output: {
-    filename: '[name].[contenthash].bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'public')
+  },
+  performance: {
+    maxAssetSize: 1000000,
+    maxEntrypointSize: 1000000,
+    hints: false
   },
   optimization: {
     splitChunks: {
@@ -21,13 +26,16 @@ module.exports = {
   },
   devServer: {
     port: 8564,
-    open: true
+    open: true,
+    contentBase: './public'
   },
   devtool: 'inline-source-map',
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: './modules/index.html'
+      template: './modules/index.html',
+      inject: true,
+      chunks: ['header', 'body', 'footer']
     })
   ],
   module: {
@@ -39,7 +47,13 @@ module.exports = {
       {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
-          'file-loader',
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images/'
+            }
+          },
           {
             loader: 'image-webpack-loader',
             options: {

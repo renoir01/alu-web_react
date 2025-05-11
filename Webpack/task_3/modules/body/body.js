@@ -3,9 +3,9 @@ import _ from 'lodash';
 import './body.css';
 
 // Add elements to the page
-$('body').append('<p>Dashboard data for the students</p>');
-$('body').append('<button>Click here to get started</button>');
-$('body').append('<p id="count"></p>');
+$('#body-container').append('<p>Dashboard data for the students</p>');
+$('#body-container').append('<button>Click here to get started</button>');
+$('#body-container').append('<p id="count"></p>');
 
 // Counter function
 let count = 0;
@@ -15,4 +15,4 @@ function updateCounter() {
 }
 
 // Bind the debounce function to the click event
-$('button').on('click', _.debounce(updateCounter, 300));
+$('#body-container button').on('click', _.debounce(updateCounter, 300));

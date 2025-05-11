@@ -5,5 +5,5 @@ import './header.css';
 console.log('Init header');
 
 // Create and append logo and title
-$('body').append('<div id="logo"></div>');
-$('body').append('<h1>Holberton Dashboard</h1>');
+$('#header-container').append('<div id="logo"></div>');
+$('#header-container').append('<h1>Holberton Dashboard</h1>');

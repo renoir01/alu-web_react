@@ -1,8 +1,27 @@
 #logo {
   width: 200px;
   height: 200px;
-  background: url('../assets/holberton-logo.jpg');
-  background-size: 200px 200px;
+  background-color: #E0354B;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  position: relative;
+}
+
+#logo::after {
+  content: 'H';
+  font-size: 100px;
+  color: white;
+}
+
+#count {
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bold;
 }
 
 button + p {
