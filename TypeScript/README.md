@@ -20,6 +20,7 @@ This project contains a series of TypeScript tasks that demonstrate various Type
 ## Setup
 
 Each task directory contains its own configuration files:
+
 - `package.json`: Dependencies and scripts
 - `tsconfig.json`: TypeScript compiler options
 - `webpack.config.js`: Webpack configuration
